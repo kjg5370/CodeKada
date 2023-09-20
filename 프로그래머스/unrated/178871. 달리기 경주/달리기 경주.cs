@@ -10,7 +10,7 @@ public class Solution {
 
         string[] answer = players;
 
-        foreach (string calling in callings) {
+         foreach (string calling in callings) {
             int rank = playerIndexMap[calling];
             string temp = answer[rank - 1];
             answer[rank - 1] = answer[rank];
@@ -19,6 +19,7 @@ public class Solution {
             playerIndexMap[calling] = rank - 1;
             playerIndexMap[answer[rank]] = rank;
         }
+            
 
         return answer;
     }
